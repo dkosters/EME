@@ -15,12 +15,12 @@ module load 2020
 module load cuDNN/8.0.4.30-CUDA-11.0.2
 
 # activate environment 
-source $HOME/PathToYourVirtualEnv/bin/activate 
+source $HOME/NQS/nqs_venv/bin/activate 
 
 # used to get advanced metrics from ear 
 export SLURM_LOADER_LOAD_NO_MPI_LIB=python
 
-srun --ear=on python $HOME/PathToYourPythonScript.py --argument $1 --argument $2 --argument $3 --device "gpu"  >> PathToWhereYouWantToSaveWhateverYourScriptPrintToConsole.txt &
+srun --ear=on python $HOME/NQS/rbm.py --alpha $1 --iterations $2 --device "gpu" &
 
 wait
 

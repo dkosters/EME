@@ -16,7 +16,7 @@ export OMP_PROC_BIND=close
 module load 2020
 
 # activate environment 
-source $HOME/PathToYourVirtualEnv/bin/activate 
+source $HOME/NQS/nqs_env/bin/activate 
 
 # makes sure only CPU is used 
 export CUDA_VISIBLE_DEVICES=''
@@ -24,6 +24,6 @@ export CUDA_VISIBLE_DEVICES=''
 # used to get advanced metrics from ear 
 export SLURM_LOADER_LOAD_NO_MPI_LIB=python
 
-srun --ear=on python $HOME/PathToYourPythonScript.py --argument $1 --argument $2 --argument $3 --device "cpu"  >> PathToWhereYouWantToSaveWhateverYourScriptPrintToConsole.txt &
+srun --ear=on python $HOME/NQS/rbm.py --alpha $1 --iterations $2 --device "cpu" &
 
 wait
