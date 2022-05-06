@@ -20,7 +20,7 @@ export CUDA_VISIBLE_DEVICES=''
 # for loop 0-39 since there are 40 cores 
 for i in {0..39}
 do
-    numactl --physcpubind=$i python $HOME/NQS/rbm.py --alpha $1 --iterations $2 --device "cpu" &
+    numactl --physcpubind=$i python $HOME/NQS/rbm.py --alpha $1 --iterations $2 --dtype $3 --device "cpu" &
 done
 
 wait

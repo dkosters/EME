@@ -11,3 +11,5 @@ The 3 main scripts are:
 
 After one of these 3 scripts is done running the data is collected with: `
 source get_results.sh joblist/cpu_normal_method.csv` or `source get_results.sh joblist/cpu_parallel_method.csv` or `source get_results.sh joblist/gpu_method.csv` for the three respective methods.
+
+The trained Models are in the folder optimized_W and the ED_amplitude.csv file is the numerical exact solution for a 4x4 2D square lattice. 
