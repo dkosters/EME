@@ -24,4 +24,5 @@ export CUDA_VISIBLE_DEVICES=''
 # used to get advanced metrics from ear 
 export SLURM_LOADER_LOAD_NO_MPI_LIB=python
 
-srun --ear=on python $HOME/NQS/rbm.py --alpha $1 --iterations $2 --dtype $3 --device "cpu" 
+srun --ear=on python $HOME/NQS/rbm.py --alpha $1 --iterations $2 --dtype $3 --device "cpu" &
+wait
