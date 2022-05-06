@@ -20,7 +20,7 @@ source $HOME/NQS/nqs_venv/bin/activate
 # used to get advanced metrics from ear 
 export SLURM_LOADER_LOAD_NO_MPI_LIB=python
 
-srun --ear=on python $HOME/NQS/rbm.py --alpha $1 --iterations $2 --device "gpu" &
+srun --ear=on python $HOME/NQS/rbm.py --alpha $1 --iterations $2 --dtype $3 --device "gpu" &
 
 wait
 
