@@ -3,6 +3,8 @@ EME (Energy Measurements with EAR)
 
 This is a guide to perform energy, latency and throughput measurements for inference tasks on the ESC cluster of SURF using EAR. 
 
+First results of a condensed matter and particle physics use case can be found on [arXiv:2209.10481](https://arxiv.org/pdf/2209.10481.pdf)
+
 It's assumed you are using python for your network and that you can adjust parameters from command line arguments such as network size, device and number of inference iterations. 
 
 First step is to setup your environment.
